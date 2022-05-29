@@ -1,7 +1,9 @@
 import random
 import easygui as g
 import json 
+import webbrowser                                       #自动打开源码网站
 
+mylink="https://github.com/panda-lsy/Complete-the-Chinese-Idioms"
 level=0
 score=0
 health=3
@@ -121,6 +123,9 @@ while True:
             health-=1
             break
     
-g.ynbox(msg="游戏结束,您的最终得分："+str(score)+"\n玩到了第"+str(level)+"关", title='游戏结束', choices=('[<F1>]好的','[<F2>]不好'), image=None, default_choice='[<F1>]好的')
+choice = g.indexbox(msg="游戏结束,您的最终得分："+str(score)+"\n玩到了第"+str(level)+"关\n作者:panda-lsy\n待更新内容:\n改写GUI,增加主界面功能\n添加更多的成语小游戏\n",title="游戏结束",choices=("好的","打开本项目的Github网址(你可能需要科学上网)"))
+if choice == 1:
+    webbrowser.open(mylink, new=0, autoraise=True)
+
 
 
