@@ -68,7 +68,7 @@ while True:
     example_tip=False
     meaning_tip=False
     while True:
-        knowledge=word+'('+source_pinyin[pos]+')\n'+"意思:"+source_meaning[pos]+"\n"+"使用例:"+source_example[pos]+"\n使用:"+source_example[pos]+"\n"
+        knowledge=word+'('+source_pinyin[pos]+')\n'+"意思:"+source_meaning[pos]+"\n"+"使用例:"+source_example[pos]+"\n出处:"+source_derivation[pos]+"\n"
         if example_tip == False and meaning_tip == False:
             answer=g.buttonbox(msg="请填空:\t"+ques, title='第'+str(level+1)+'关\t\t'+"分数:"+str(score)+"❤"*health, choices=(choice1, choice2, choice3, choice4,"更多选项"))#输出题目ques
         elif example_tip == True and meaning_tip == False:
